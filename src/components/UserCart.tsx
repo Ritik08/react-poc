@@ -21,10 +21,10 @@ const UserCart: FunctionComponent<Props> = observer((props) => {
             <div className={'userCart p-3'}>
                 <div className="container mb-5">
                     <div className="row gy-3">
-                        <div className="col gy-3">
+                        <div className="col">
                             <strong>Bob's Cart</strong>
                         </div>
-                        <div className="col gy-3">
+                        <div className="col">
                             {/*{?.carts[0]?.products?.totalProducts}*/}
                         </div>
                     </div>
@@ -34,7 +34,7 @@ const UserCart: FunctionComponent<Props> = observer((props) => {
                         {props.store.cartData?.carts[0]?.products?.map((item: any) => {
                             return (
                                 <div key={item.id} className="col-sm">
-                                    <Card style={{height: '15rem', boxSizing: 'border-box'}}>
+                                    <Card style={{height: '15rem', maxWidth: "17.5rem"}}>
                                         <CardBody>
                                             <CardTitle style={{
                                                 overflow: "hidden",

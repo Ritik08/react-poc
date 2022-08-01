@@ -7,6 +7,7 @@ import UserCart from "./components/UserCart";
 import ProductList from "./components/ProductList";
 import {UserProfile} from "./components/UserProfile";
 import {Store} from "./store";
+import HocIndex from "./components/Hoc/hocIndex";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                         <Route index element={<ProductList store={Store}/>}/>
                         <Route path="userCart/2" element={<UserCart store={Store}/>}/>
                         <Route path="myProfile/2" element={<UserProfile id={1} store={Store}/>}/>
+                        <Route path="/hoc" element={<HocIndex/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

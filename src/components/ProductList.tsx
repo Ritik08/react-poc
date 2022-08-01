@@ -32,7 +32,7 @@ const ProductList: FunctionComponent<Props> = observer((props) => {
         const {firstName, lastName} = props?.store?.userData?.data
         // const {id, isDeleted} = useDeleteProduct()
         // console.log("id:", id, 'isDeleted', isDeleted)
-        console.log(JSON.parse(JSON.stringify(data)))
+        // console.log(JSON.parse(JSON.stringify(data)))
         return (
             <>
                 <div className={'products p-4'}>
@@ -88,12 +88,12 @@ const ProductList: FunctionComponent<Props> = observer((props) => {
                                                     }}>
                                                         <strong>Description:</strong> {item.description}
                                                     </CardText>
-                                                    <Button style={{marginRight: '1rem'}}
+                                                    <strong>ProductID:</strong> {item.id}
+                                                    <Button className={'ms-5'}
                                                             onClick={() => handleAddToCart({id: item.id, quantity: 1})}>
                                                         Add To Cart
                                                     </Button>
 
-                                                    <strong>ProductID:</strong> {item.id}
                                                 </CardBody>
                                             </Card>
                                         </div>

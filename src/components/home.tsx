@@ -7,8 +7,6 @@ import {Toast, ToastBody, ToastHeader} from "reactstrap";
 
 const Home: FunctionComponent<any> = observer((props) => {
     const {categories} = props?.store?.allCategories
-    const {data} = props?.store?.products
-
 
     useEffect(() => {
         props.store.getCategoriesData()
@@ -61,7 +59,7 @@ const Home: FunctionComponent<any> = observer((props) => {
                         </nav>
                     </div>
                 </nav>
-                <main>
+                <main style={{backgroundColor: 'rgb(244, 245, 247)'}}>
                     <div className="p-3 my-2 rounded"
                          style={{position: "absolute", top: '6rem', right: 0, zIndex: 9999}}>
                         <Toast className={'bg-white'} isOpen={props.store.toastStatus}>
@@ -73,7 +71,7 @@ const Home: FunctionComponent<any> = observer((props) => {
                             </ToastBody>
                         </Toast>
                     </div>
-                    <Outlet context={data}/>
+                    <Outlet/>
                 </main>
             </section>
 
