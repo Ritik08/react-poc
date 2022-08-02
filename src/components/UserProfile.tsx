@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {StoreImpl} from "../store";
 import {observer} from "mobx-react";
-import HocIndex from './Hoc/hocIndex'
 import {Link} from "react-router-dom";
+import {Button} from "reactstrap";
 
 
 type UserProps = {
@@ -36,7 +36,12 @@ export class UserProfile extends Component<UserProps> {
                                     <div className="card mb-3" style={{borderRadius: ".5rem"}}>
                                         <div className="row g-0">
                                             {this.isAdmin &&
-                                            <Link className={'ms-3'} to={"/hoc"}>Show All User & Todos</Link>}
+                                            <Link className={'m-2'} to={"/hoc"}>
+                                                <Button className={"btn-secondary"}>Show All User & Todos Hoc
+                                                    Component</Button></Link>}
+
+                                            <Link className={'m-2'} to={"/useApi"}> <Button
+                                                className={"btn-secondary"}>useAPI Component</Button></Link>
 
                                             <div className="col-md-4 gradient-custom text-center text-white"
                                                  style={{

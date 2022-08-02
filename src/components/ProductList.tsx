@@ -19,7 +19,6 @@ interface OwnProps {
 type Props = OwnProps;
 
 const ProductList: FunctionComponent<Props> = observer((props) => {
-
         useEffect(() => {
                 props.store.getUserData()
             },
