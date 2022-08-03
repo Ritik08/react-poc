@@ -1,7 +1,7 @@
 import React, {FunctionComponent, useEffect} from 'react';
 import '../styles/home.css'
 
-import {Outlet} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 import {observer} from "mobx-react";
 import {Toast, ToastBody, ToastHeader} from "reactstrap";
 

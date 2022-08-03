@@ -8,6 +8,7 @@ import {UserProfile} from "./components/UserProfile";
 import {Store} from "./store";
 import HocIndex from "./components/Hoc/hocIndex";
 import UseApiJsx from "./customHooks/useApiJsx";
+import {RouterIndex} from "./mobxStateRouter/routerIndex";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                         <Route path="myProfile/2" element={<UserProfile id={1} store={Store}/>}/>
                         <Route path="/hoc" element={<HocIndex/>}/>
                         <Route path="/useApi" element={<UseApiJsx/>}/>
+                        <Route path='/routerIndex' element={<RouterIndex/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

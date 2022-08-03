@@ -47,6 +47,9 @@ const ProductList: FunctionComponent<Props> = observer((props) => {
                                 <Link to={'userCart/2'}><Button className={"btn-secondary me-2"}>Bob's
                                     Cart</Button></Link>
                                 <Link to={"myProfile/2"}><Button className={"btn-secondary"}>Bob's Profile</Button></Link>
+                                <Link to={'routerIndex'}><Button className={"btn-secondary ms-2"}>Mobx
+                                    Routing</Button></Link>
+
                             </div>
                         </div>
                     </div>
